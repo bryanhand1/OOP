@@ -3,13 +3,14 @@ import random
 
 
 class insect:
-    def __init__(self):
-        self.__wings = 2
-        self.__legs = 4
+    def __init__(self, w, l, f):
+        self.__wings = w
+        self.__legs = l
+        self.__flight = f
 
     def flight(self):
-        self.__distance = random.randint(1, 10)
-        return self.__distance
+        self.__flight = random.randint(1, 10)
+        return self.__flight
 
     def wings(self):
         return self.__wings
@@ -23,7 +24,7 @@ def main():
     while again == "y":
         again = input("Would you like to create an insect? (y/n) \n")
         if again == "y":
-            my_insect = insect()
+            my_insect = insect(0, 0, 0)
             print(
                 "The insect has "
                 + str(my_insect.wings())
